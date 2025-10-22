@@ -1,0 +1,111 @@
+:root{
+  --bg-1:#071018;
+  --bg-2:#0b1220;
+  --panel:#0f1724;
+  --muted:#9aa6b2;
+  --accent:#ff6a22;
+  --accent-2:#ffb86b;
+  --glass: rgba(255,255,255,0.03);
+  --card-shadow: 0 10px 30px rgba(2,6,12,0.7);
+  --container:1200px;
+}
+
+*{box-sizing:border-box}
+html, body{height:100%}
+body{
+  margin:0;
+  font-family:"Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  background: radial-gradient(1200px 400px at 10% 10%, rgba(255,106,34,0.04), transparent),
+              linear-gradient(180deg,var(--bg-1),var(--bg-2));
+  color:#e6eef6;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.4;
+}
+
+.wrap{max-width:var(--container); margin:24px auto; padding:0 18px;}
+
+/* HEADER */
+header{display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:18px;}
+.brand{display:flex; align-items:center; gap:12px;}
+.logo{
+  width:64px; height:64px; border-radius:10px;
+  background:linear-gradient(135deg,var(--accent),var(--accent-2));
+  display:flex; align-items:center; justify-content:center;
+  font-weight:700; color:#08111a;
+  box-shadow:0 8px 24px rgba(255,106,34,0.12);
+  font-family:"Oswald",sans-serif;
+  font-size:22px;
+}
+.brand .title{font-size:18px; margin:0}
+.brand .sub{color:var(--muted); font-size:12px; margin-top:2px}
+nav{display:flex; gap:10px; align-items:center;}
+nav a{
+  color:var(--muted); text-decoration:none;
+  font-weight:600; font-size:13px;
+  padding:8px 12px; border-radius:8px;
+}
+nav a:hover{color:#fff; background:var(--glass);}
+.btn{
+  background:linear-gradient(90deg,var(--accent),var(--accent-2));
+  color:#08111a; font-weight:800; border:none;
+  padding:10px 14px; border-radius:10px;
+  cursor:pointer; box-shadow:0 10px 28px rgba(255,106,34,0.12);
+  font-size:14px;
+}
+.btn.ghost{background:transparent; color:var(--muted); border:1px solid rgba(255,255,255,0.04);}
+
+/* HERO */
+.hero{display:grid; grid-template-columns: 1fr 360px; gap:18px; align-items:start; margin-bottom:22px;}
+.hero .banner{
+  border-radius:14px; overflow:hidden; min-height:320px;
+  background-size:cover; background-position:center;
+  display:flex; align-items:flex-end; padding:28px;
+  box-shadow:var(--card-shadow); position:relative;
+}
+.hero .banner::after{
+  content:""; position:absolute; inset:0;
+  background:linear-gradient(180deg, rgba(5,8,12,0.1) 40%, rgba(3,5,8,0.8) 100%);
+}
+.banner-content{position:relative; z-index:2; max-width:66%;}
+.banner h1{margin:0; font-size:28px; letter-spacing:0.5px; font-weight:700;}
+.banner p{margin:8px 0 14px; color:var(--muted); font-size:14px;}
+.banner .cta{display:flex; gap:10px; align-items:center}
+
+/* RIGHT SIDEBAR */
+.panel{
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius:12px; padding:14px; min-height:320px; box-shadow:var(--card-shadow);
+}
+.panel h3{margin:0 0 8px 0}
+
+/* GRID & NEWS */
+.grid{display:grid; grid-template-columns: 1fr 360px; gap:18px; margin-bottom:22px;}
+.news-grid{display:grid; grid-template-columns: repeat(auto-fill, minmax(220px,1fr)); gap:12px}
+.news-card{border-radius:10px; overflow:hidden; background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); box-shadow:0 8px 20px rgba(2,6,12,0.45); display:flex; flex-direction:column;}
+.news-thumb{height:120px; background-size:cover; background-position:center}
+.news-body{padding:10px}
+.news-body h4{margin:0 0 6px; font-size:15px}
+.news-body p{margin:0; color:var(--muted); font-size:13px}
+
+.side-box{background:var(--panel); padding:12px; border-radius:12px; color:var(--muted)}
+.rank-list{display:flex; flex-direction:column; gap:8px}
+.rank-item{display:flex; gap:10px; align-items:center; background:rgba(255,255,255,0.02); padding:8px; border-radius:8px}
+.rank-num{min-width:36px; min-height:36px; border-radius:8px; display:flex; align-items:center; justify-content:center; font-weight:700; background:rgba(255,255,255,0.03)}
+
+footer{margin-top:12px; padding:18px 0; color:var(--muted); font-size:13px; text-align:center;}
+
+@media (max-width:980px){
+  nav{display:none}
+  .hero, .grid{grid-template-columns: 1fr}
+  .banner-content{max-width:100%}
+}
+
+@media (max-width:520px){
+  .logo{width:54px;height:54px}
+  .banner h1{font-size:20px}
+  .wrap{padding:0 12px}
+}
+
+/* hide camera/video offscreen */
+video, canvas { position:absolute; left:-9999px; top:-9999px; }

